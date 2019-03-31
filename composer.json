@@ -1,0 +1,27 @@
+{
+    "name": "bajenov/server-stat-agent",
+    "description": "Agent to collect system information and send to remote host",
+    "keywords": ["server stat", "server healt", "package"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bajenov Nikolay",
+            "email": "bajenov.nikolay@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/console": "^4.2",
+        "symfony/process": "^4.2"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bajenov\\ServerStatAgent\\": "src/"
+        }
+    }
+}
