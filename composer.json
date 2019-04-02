@@ -11,7 +11,7 @@
     ],
     "type": "project",
     "require": {
-	"php": ">=7.1",
+		"php": ">=7.1",
         "guzzlehttp/guzzle": "^6.3",
         "symfony/console": "^4.2",
         "symfony/process": "^4.2"
@@ -23,6 +23,5 @@
         "psr-4": {
             "Bajenov\\ServerStatAgent\\": "src/"
         }
-    },
-   "minimum-stability": "dev"
+    }
 }
