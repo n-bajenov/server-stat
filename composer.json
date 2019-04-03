@@ -1,5 +1,5 @@
 {
-    "name": "bajenov/server-stat-agent",
+    "name": "bajenov/server-stat",
     "description": "Agent to collect system information and send to remote host",
     "keywords": ["server stat", "server healt", "package"],
     "license": "MIT",
