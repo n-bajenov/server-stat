@@ -9,7 +9,7 @@ use GuzzleHttp\Psr7\Request;
 class Sender
 {
     private $url;
-    private $method;
+    
 
     public function __construct(string $sendToUrl)
     {
@@ -17,15 +17,15 @@ class Sender
             throw new \Exception('Url is not valid');
         }
 
-        $this->url = parse_url($sendToUrl, PHP_URL_HOST);
-        $this->method = parse_url($sendToUrl, PHP_URL_PATH) . '?' . parse_url($sendToUrl, PHP_URL_QUERY);
+        $this->url = $sendToUrl;
+        
     }
 
     public function send(array $data, array $headers = [])
     {
-
-        $client = new Client(['base_uri' => $this->url, 'verify' => false]);
-        $response = $client->request('POST', $this->method, [
+	
+        $client = new Client();
+        $response = $client->request('POST', $this->url, [
             'headers' => $headers,
             'json' => $data
         ]);
