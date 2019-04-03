@@ -24,7 +24,7 @@ class Sender
     public function send(array $data, array $headers = [])
     {
 
-        $client = new Client(['base_uri' => $this->url]);
+        $client = new Client(['base_uri' => $this->url, 'verify' => false]);
         $response = $client->request('POST', $this->method, [
             'headers' => $headers,
             'json' => $data
