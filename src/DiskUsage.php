@@ -57,15 +57,15 @@ class DiskUsage
     {
         switch ($format) {
             case 'kb':
-                return ($type == 'used') ? $this->used : $this->total;
+                return ($type == 'used') ? $this->used : $this->total / 1024;
                 break;
 
             case 'mb':
-                return ($type == 'used') ? round($this->used / 1024) : round($this->total / 1024);
+                return ($type == 'used') ? round($this->used / 1024 / 1024) : round($this->total / 1024 / 1024);
                 break;
 
             case 'gb':
-                return ($type == 'used') ? round($this->used / 1024 / 1024) : round($this->total / 1024 / 1024);
+                return ($type == 'used') ? round($this->used / 1024 / 1024 / 1024) : round($this->total / 1024 / 1024 / 1024);
                 break;
         }
 
